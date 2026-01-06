@@ -4,65 +4,220 @@
 <meta charset="UTF-8">
 <title>Мастер Окна — ремонт окон в Алматы</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 html{scroll-behavior:smooth}
 body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#f4f8fc;color:#1a2e40}
-header{min-height:80vh;background:linear-gradient(135deg,#fff,#e8f2ff);display:flex;align-items:center;justify-content:center;text-align:center;padding:30px 15px}
-.logo-wrap{display:inline-block;padding:18px;border-radius:28px;background:#fff;box-shadow:0 20px 40px rgba(0,0,0,.15);animation:logoIn 1.2s ease}
+
+header{
+  min-height:80vh;
+  background:linear-gradient(135deg,#fff,#e8f2ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:30px 15px
+}
+
+.logo-wrap{
+  display:inline-block;
+  padding:18px;
+  border-radius:28px;
+  background:#fff;
+  box-shadow:0 20px 40px rgba(0,0,0,.15);
+  animation:logoIn 1.2s ease
+}
+
 header img{max-width:260px}
-@keyframes logoIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
-.counter{font-size:42px;font-weight:700;color:#2f80ed;margin-top:10px}
-.phone{display:inline-block;margin-top:10px;font-size:20px;font-weight:600;color:#2f80ed;text-decoration:none}
-section{padding:55px 20px;max-width:1200px;margin:auto}
-h2{text-align:center;font-size:30px;margin-bottom:35px}
-.services,.advantages{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px}
-.card,.adv{background:#fff;border-radius:20px;box-shadow:0 15px 35px rgba(0,0,0,.1);overflow:hidden}
-.card img{width:100%;height:180px;object-fit:cover}
+
+@keyframes logoIn{
+  from{opacity:0;transform:scale(.9)}
+  to{opacity:1;transform:scale(1)}
+}
+
+.counter{
+  font-size:42px;
+  font-weight:700;
+  color:#2f80ed;
+  margin-top:10px
+}
+
+.phone{
+  display:inline-block;
+  margin-top:10px;
+  font-size:20px;
+  font-weight:600;
+  color:#2f80ed;
+  text-decoration:none
+}
+
+section{
+  padding:55px 20px;
+  max-width:1200px;
+  margin:auto
+}
+
+h2{
+  text-align:center;
+  font-size:30px;
+  margin-bottom:35px
+}
+
+.services,.advantages{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px
+}
+
+.card,.adv{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 15px 35px rgba(0,0,0,.1);
+  overflow:hidden
+}
+
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover
+}
+
 .card-content,.adv{padding:22px}
-footer{background:#e8f2ff;text-align:center;padding:25px}
-.whatsapp{position:fixed;right:18px;bottom:18px;background:#2f80ed;color:#fff;padding:15px 18px;border-radius:50px;text-decoration:none}
+
+footer{
+  background:#e8f2ff;
+  text-align:center;
+  padding:25px
+}
+
+/* =========================
+   WhatsApp кнопка (ТЕКСТ)
+========================= */
+.whatsapp{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  background:#25D366;
+  color:#fff;
+  padding:16px 22px;
+  border-radius:50px;
+  text-decoration:none;
+  font-size:20px;
+  font-weight:600;
+  box-shadow:0 8px 25px rgba(37,211,102,.45);
+  z-index:999;
+  animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{box-shadow:0 0 0 0 rgba(37,211,102,.6)}
+  70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}
+  100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}
+}
+
+.whatsapp:hover{
+  background:#1ebe5d;
+}
+
+/* Увеличение на телефонах */
+@media (max-width:768px){
+  .whatsapp{
+    font-size:22px;
+    padding:20px 28px;
+    right:14px;
+    bottom:14px;
+  }
+}
 </style>
 </head>
+
 <body>
 
 <header>
- <div>
-  <div class="logo-wrap">
-   <img src="logo.png" alt="Мастер Окна">
+  <div>
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Мастер Окна">
+    </div>
+    <h1>Ремонт пластиковых окон в Алматы</h1>
+    <div class="counter">20+ лет опыта</div>
+    <a href="tel:+77015147595" class="phone">📞 +7 701 514 75 95</a>
   </div>
-  <h1>Ремонт пластиковых окон в Алматы</h1>
-  <div class="counter">20+ лет опыта</div>
-  <a href="tel:+77015147595" class="phone">📞 +7 701 514 75 95</a>
- </div>
 </header>
 
 <section>
 <h2>Наши услуги</h2>
 <div class="services">
-<div class="card"><img src="https://funke-gruppe.kz/wp-content/uploads/2021/11/fit_930_519_false_crop_1000_562_0_52_q90_1120531_be1a973f31.jpeg"><div class="card-content"><h3>Регулировка окон</h3><p>Устраняем перекосы и скрипы.</p></div></div>
-<div class="card"><img src="https://okno.ru/files/787/zamena-uplotnitelya2.jpg"><div class="card-content"><h3>Замена уплотнителей</h3><p>Защита от холода и шума.</p></div></div>
-<div class="card"><img src="https://okokna.ru/sites/default/files/styles/blog_704_328/public/079.jpg"><div class="card-content"><h3>Ремонт фурнитуры</h3><p>Ручки, петли, механизмы.</p></div></div>
-<div class="card"><img src="https://nn.tbmmarket.ru/upload/iblock/e16/e1680a6ba714ca7f89115f03ab46bb37.jpg"><div class="card-content"><h3>Установка подоконников</h3><p>Монтаж и замена подоконников.</p></div></div>
-<div class="card"><img src="https://obninskie-okna.ru/images/photos/pictures/moskitnaya-setka-foto-1.jpg"><div class="card-content"><h3>Анти-москитные сетки</h3><p>Установка москитных сеток.</p></div></div>
-<div class="card"><img src="https://balkontomsk.ru/img/ustanovka-otkosov.jpg"><div class="card-content"><h3>Установка откосов</h3><p>Внутренние и внешние откосы.</p></div></div>
+
+<div class="card">
+<img src="https://funke-gruppe.kz/wp-content/uploads/2021/11/fit_930_519_false_crop_1000_562_0_52_q90_1120531_be1a973f31.jpeg">
+<div class="card-content">
+<h3>Регулировка окон</h3>
+<p>Устраняем перекосы и скрипы.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://okno.ru/files/787/zamena-uplotnitelya2.jpg">
+<div class="card-content">
+<h3>Замена уплотнителей</h3>
+<p>Защита от холода и шума.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://okokna.ru/sites/default/files/styles/blog_704_328/public/079.jpg">
+<div class="card-content">
+<h3>Ремонт фурнитуры</h3>
+<p>Ручки, петли, механизмы.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://nn.tbmmarket.ru/upload/iblock/e16/e1680a6ba714ca7f89115f03ab46bb37.jpg">
+<div class="card-content">
+<h3>Установка подоконников</h3>
+<p>Монтаж и замена подоконников.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://obninskie-okna.ru/images/photos/pictures/moskitnaya-setka-foto-1.jpg">
+<div class="card-content">
+<h3>Анти-москитные сетки</h3>
+<p>Установка москитных сеток.</p>
+</div>
+</div>
+
+<div class="card">
+<img src="https://balkontomsk.ru/img/ustanovka-otkosov.jpg">
+<div class="card-content">
+<h3>Установка откосов</h3>
+<p>Внутренние и внешние откосы.</p>
+</div>
+</div>
+
 </div>
 </section>
 
 <section style="background:#f0f7ff">
 <h2>Преимущества Мастер Окна</h2>
 <div class="advantages">
- <div class="adv"><h3>Быстрое решение проблем</h3><p>Оперативный выезд мастера по Алматы и пригороду.</p></div>
- <div class="adv"><h3>Качество и гарантии</h3><p>Гарантия на работы от 6 месяцев.</p></div>
- <div class="adv"><h3>Надёжные материалы</h3><p>Только проверенные комплектующие.</p></div>
- <div class="adv"><h3>График работы</h3><p>Минимальные сроки — большинство работ за 1 визит.</p></div>
+  <div class="adv"><h3>Быстрое решение проблем</h3><p>Оперативный выезд мастера по Алматы и пригороду.</p></div>
+  <div class="adv"><h3>Качество и гарантии</h3><p>Гарантия на работы от 6 месяцев.</p></div>
+  <div class="adv"><h3>Надёжные материалы</h3><p>Только проверенные комплектующие.</p></div>
+  <div class="adv"><h3>График работы</h3><p>Минимальные сроки — большинство работ за 1 визит.</p></div>
 </div>
 </section>
 
 <footer>
-© 2026 Мастер Окна Алматы | <a href="tel:+77015147595">8 701 514 75 95</a>
+© 2026 Мастер Окна Алматы |
+<a href="tel:+77015147595">8 701 514 75 95</a>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/77015147595" target="_blank">WhatsApp</a>
+<!-- WhatsApp кнопка -->
+<a class="whatsapp" href="https://wa.me/77015147595" target="_blank">
+  WhatsApp
+</a>
 
 </body>
 </html>
